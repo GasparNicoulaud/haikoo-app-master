@@ -1,0 +1,411 @@
+
+@import url('https://rsms.me/inter/inter.css');
+
+html {
+  font-family: 'Inter', sans-serif;
+}
+
+.checkboxcont {
+  right: 20px;
+  position: absolute;
+}
+
+#batch::after {
+  content: '';
+background-image: url(../public/Svg/bamboo-danny-allen-r.svg);
+position: absolute;
+left: 0;
+filter: url(#shaka) invert(0.5);
+width: 200px;
+height: 200px;
+/* background-repeat-x: no-repeat; */
+/* background: no-repeat; */
+top: 0;
+/*    fill: white;*/
+z-index: -2;
+
+}
+#batch::before {
+  content: '';
+background-image: url(../public/Svg/bamboo-danny-allen-r.svg);
+position: absolute;
+left: 0;
+filter:  invert(0.6);
+width: 200px;
+height: 200px;
+/* background-repeat-x: no-repeat; */
+/* background: no-repeat; */
+top: 0;
+/*    fill: white;*/
+z-index: -1;
+
+}
+
+#closebutton {
+  width: 5vw;
+    filter: invert(1);
+    right: 1vw;
+    top: 1vw;
+    position: fixed;
+    cursor: pointer;
+}
+
+#closebutton:hover {
+  filter: url(#shaky);
+}
+
+body {
+  background: #E7E7E7;
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  position: relative;
+}
+
+#batch {
+  word-break: break-all;
+  margin: 1vw 5vw;
+  margin-top: -3vw;
+  margin-bottom: 3vw;
+ 
+  font-family: 'Inter', sans-serif;
+}
+
+.bottom_controls button, .signout button {
+  margin: auto;
+  display: block;
+  background: transparent !important;
+  color: black !important;
+  text-transform: uppercase;
+  border: 1px solid black !important;
+  padding: 1vw;
+  width: 25vw;
+  cursor: pointer;
+
+}
+.bottom_controls button:active, .signout button:active {
+  
+  background: blue !important;
+  
+
+}
+.signout {
+display: flex;
+    background: white;
+    filter: invert(1);
+    height: 60px;
+    align-items: center;
+    margin: auto;
+    width: 100vw;
+    
+}
+
+.bottom_controls button:focus , .signout button:focus {
+  /*  outline-offset: -6px;*/
+  outline: none !important;
+}
+
+.bottom_controls button:hover  , .signout button:hover{
+  margin: auto;
+  display: block;
+  background: transparent !important;
+  color: grey !important;
+  text-transform: uppercase;
+  border: none !important;
+
+}
+.invisible {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.letter {
+  /*background: yellow;*/
+  margin: 1vw;
+  width: 2ch;
+  transition: all 0.3s ease-in-out;
+  font-size: 2.5vw;
+}
+
+
+.letlist {
+  /*background: red;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 8vw;
+  padding-top: 0;
+  padding-bottom: 4vw;
+  padding-bottom: 4vw;
+  width: 80vw;
+  margin: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.shaky {
+  filter: url(#shaka);
+}
+
+p {
+  margin: 2vw;
+  display: block;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 2vw;
+}
+
+h1 {
+  /*	font-family: 'Inter', sans-serif; */
+}
+
+#letterslist {
+
+  width: 100vw;
+  position: relative;
+  /*background: green;*/
+
+}
+
+#letcount {
+  font-size: 2vw;
+  margin-left: 78vw;
+  /* margin-top: -5vw; */
+  margin-bottom: 2vw;
+}
+
+.used {
+  color: #C8C8C8;
+  filter: drop-shadow(0 0 5px #0003);
+}
+
+.notused {
+  color: black;
+  filter: drop-shadow(0 0 2px white);
+}
+
+#userview {
+  display: block;
+  width: 100vw;
+  min-height:100vh ;
+  /* position: fixed; */
+  background: white;
+  flex-direction: column;
+  display: flex;
+ 
+}
+textarea {
+  width: 80%;
+  display: block;
+  /* margin-left: 10% !important; */
+  text-align: center;
+  align-items: center;
+  align-self: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 3vw;
+  margin: auto;
+}
+
+textarea:focus {
+  /*  outline-offset: -6px;*/
+  outline: none !important;
+}
+
+#filename {
+  width: calc(100% - 200px);
+  border: 2px solid #3ba9f4;
+  border-radius: 2px;
+  background-color: transparent;
+  color: #052a53;
+  padding: 0 10px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+#haikoopast ul {
+    background-color: white;
+    padding: 1vw;
+    
+    border-radius: 1em;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2vw auto;
+    font-size: large;
+    flex-basis: 23.3333%;
+    height:17vw;
+    cursor: pointer;
+  
+}
+.haikoo_card_selected {
+  filter: drop-shadow(0 3px 6px
+	 rgba(0, 0, 0, 0.16))
+	 drop-shadow(0 3px 6px
+	 rgba(0, 0, 0, 0.1));
+	transition: all 0.3s ease-in-out;
+  transform: scale(-1) rotateX(180deg) rotateY(180deg);
+  perspective: 1000px;
+  transform-origin: 50% 50%;
+  flex-grow: 0.3;
+  transform-style: preserve-3d;
+  z-index: 99;
+
+}
+
+.haikoo_card_selected .title_haikoo {
+ background-color: #91b894;
+ transition: all 0.3s ease-in-out;
+}
+
+.haikoo_cards {
+  filter: drop-shadow(0 3px 6px
+	 rgba(0, 0, 0, 0.16))
+	 drop-shadow(0 3px 6px
+	 rgba(0, 0, 0, 0.1));
+   transition: all 0.3s;
+
+}
+.haikoo_cards:hover {
+	filter: drop-shadow(0 14px 28px
+	 rgba(0, 0, 0, 0.25))
+	 drop-shadow(0 10px 10px
+ rgba(0, 0, 0, 0.1));
+}
+
+
+#haikoopast ul  i {
+  color:#2869b1;
+  text-align: right;
+}
+
+
+#haikoopast ul:nth-of-type(2n)  i {
+  color:#7f387a;
+}
+#haikoopast ul:nth-of-type(3n)   i{
+  color:#ecb756;
+}
+#haikoopast ul:nth-of-type(4n)  i {
+  color:#931618;
+}
+#haikoopast ul:nth-of-type(5n)  i {
+  color:#0d057d;
+}
+#haikoopast ul:nth-of-type(6n)  i {
+  color:#2e984c;
+}
+
+
+#chosen_haikoo i {
+  color:#052a53;
+}
+
+.title_haikoo {
+  background-color: black;
+  color: white;
+  margin-top: -1vw;
+  /* width: 100%; */
+  margin-left: -1vw;
+  margin-right: -1vw;
+  border-radius: 11px 11px 0 0;
+  text-align: center;
+  font-size: 1.5vw;
+  padding: 1vw;
+}
+
+.haikoo_text {
+  text-align: center;
+  border-bottom: solid 1 px black;
+  padding: 3vw;
+  margin: auto;
+  /* border-bottom: solid 1px black; */
+}
+#chosen_haikoo {
+  background-color: rgba(255, 255, 255, 0.713);
+  padding: 0.5vw;
+    border-radius: 1em;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    width: 75vw;
+}
+#firebaseui_container {
+  width: fit-content;
+  margin-left: 81vw;
+}
+#haikoopast {
+ 
+  height: auto;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  width: 96vw;
+  /* z-index: 99; */
+  /* position: absolute; */
+  /* top: -17px; */
+  background-color: #b5b3b3;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#goalreach {
+  color: burlywood;
+}
+
+.bottom_controls {
+  display: flex;
+  width:100vw;
+  flex-direction: row;
+  background-color: #C8C8C8;
+  position: fixed;
+  bottom: 0;
+}
+
+.startbutton_init {
+  display: block;
+    margin: auto;
+    position: absolute;
+    bottom: 25vh;
+    margin-left: 37.5vw;
+  
+}
+
+.Myhaikoos {
+  margin: auto;
+  /* display: flex; */
+  border: 2px black solid;
+  border-radius: 1em;
+  width: 80vw;
+  text-align: center;
+}
+
+#fixed_head_count {
+  position: fixed;
+  background: #8593ff;
+  width: 100vw;
+  color: white;
+  /* opacity: 0.6; */
+  display: flex;
+  margin: auto;
+  /* align-items: initial; */
+  z-index: 99;
+  height: fit-content;  
+  height: 30px;
+}
+#fixed_head_count p {
+ margin: auto;
+}
+
+#technical_score {
+ 
+  position: absolute;
+    color: #6b7a64;
+    /* bottom: 0; */
+    right: 10px;
+}
